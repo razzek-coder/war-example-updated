@@ -1,0 +1,9 @@
+<project name="MyProject" default="replace" basedir=".">
+	<description>
+		update example
+	</description>
+	
+	<target name="replace">
+		<replace file="target/classes/file.xml" token="@password" value="SECRET"/>
+	</target>
+</project>
