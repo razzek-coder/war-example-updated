@@ -9,9 +9,14 @@ pipeline {
 	}
 
 	stages {
-		stage('PackageDocker') {
+		stage('Compile') {
 			steps {
-				bat 'mvn -B -q -P docker-build clean package'
+				bat 'mvn -B -q clean compile'
+			}
+		}
+		stage('Package') {
+			steps {
+				bat 'mvn -B -q -P docker-build package'
 			}
 		}
 		stage('Deploy') {
