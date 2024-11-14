@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>bootcamp.jenkins</groupId>
+	<artifactId>war-example-updated</artifactId>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
+	<name>war-example-updated</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>bootcamp.jenkins</groupId>
+			<artifactId>war-example</artifactId>
+			<version>0.0.1</version>
+			<type>war</type>
+			<scope>runtime</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<overlays>
+						<overlay>
+							<groupId>bootcamp.jenkins</groupId>
+							<artifactId>war-example</artifactId>
+						</overlay>
+					</overlays>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>
