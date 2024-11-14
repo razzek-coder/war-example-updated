@@ -12,6 +12,9 @@ pipeline {
 		stage('Compile') {
 			steps {
 				bat 'mvn -B -q clean compile'
+				withAnt(installation: 'ant 1.10.15') {
+					bat 'ant replace'
+				}
 			}
 		}
 		stage('Package') {
