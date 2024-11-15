@@ -4,6 +4,7 @@
 	</description>
 	
 	<target name="replace">
-		<replace file="target/classes/file.xml" token="@password" value="SECRET"/>
+		<replace file="target/classes/file.xml" token="@usuario@" value="usuario-especial"/>
+		<replace file="target/classes/file.xml" token="@password@" value="S3cr3T"/>
 	</target>
 </project>
