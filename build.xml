@@ -6,6 +6,6 @@
 	<target name="replace">
 		<replace file="target/classes/file.xml" token="@usuario@" value="usuario-especial"/>
 		<replace file="target/classes/file.xml" token="@password@" value="S3cr3T"/>
-		<replace file="target/classes/file.xml" token="@LOG_DIRECTORY@" value="/var/logs/produccion"/>
+		<replace file="target/classes/log4j.properties" token="@LOG_DIRECTORY@" value="/var/logs/produccion"/>
 	</target>
 </project>
